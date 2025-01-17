@@ -1,11 +1,1 @@
-# promptfoo command
-
-## run evaluation
-```
-npx promptfoo@latest eval
-```
-
-## report view
-```
-npx promptfoo@latest view
-```
+# promptfoo 整合 dify workflow api 客服問答評估

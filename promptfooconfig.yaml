@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+prompts:
+  - prompts.txt
+
+providers:
+  - id: https
+    config:
+      request: |
+        POST /v1/workflows/run HTTP/1.1
+        Host: aiclass.buildschool.dev
+        Content-Type: application/json
+        Authorization: Bearer app-???
+
+        {
+          "inputs": {
+            "user_input": "{{Question}}"
+          },
+          "response_mode": "blocking",
+          "user": "abc-123"
+        }
+      transformResponse: 'json.data.outputs.text'
+
+# Public sheet, or requires a service account with read access
+tests: https://docs.google.com/spreadsheets/d/1t5BlVKssg0PJ-7H2SI1J0ZPWFBW--7l0d6vCzqa37Bs/edit?usp=sharing
+
