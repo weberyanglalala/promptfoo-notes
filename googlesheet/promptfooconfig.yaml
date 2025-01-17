@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+prompts:
+  - prompts.txt
+
+providers:
+  - openai:gpt-4o-mini
+
+# Public sheet, or requires a service account with read access
+tests: https://docs.google.com/spreadsheets/d/1t5BlVKssg0PJ-7H2SI1J0ZPWFBW--7l0d6vCzqa37Bs/edit?usp=sharing
